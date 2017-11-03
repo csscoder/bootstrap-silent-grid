@@ -1,17 +1,17 @@
 ///* SILENT BOOTSTRAP GRID */
 ///***********************************************/
 
-$grid-columns: 12;
-$grid-gutter-width: 30px;
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
 
 // media steps
 $mediaSteps: (
-        sm: 576,
+        default: 'default',
+        sm: 576px,
         md: 768px,
         lg: 992px,
-        xl: 1200px,
-        xs: 'by default'
-);
+        xl: 1200px
+) !default;
 
 // container max width
 $container-max-widths: (
@@ -19,7 +19,7 @@ $container-max-widths: (
         md: 720px,
         lg: 960px,
         xl: 1140px
-);
+) !default;
 
 // mixin for media queries steps
 // USE
@@ -56,7 +56,6 @@ $container-max-widths: (
   }
 }
 
-
 %flex {
   display: flex;
 }
@@ -68,15 +67,23 @@ $container-max-widths: (
   margin-right: auto;
   margin-left: auto;
 
+  $lengthMediaStepsContainer: length($container-max-widths);
+
   @each $breakpoint, $valueMedia in $mediaSteps {
     @each $breakpointWidth, $valueWidth in $container-max-widths {
       @if $breakpoint == $breakpointWidth {
-        @media (max-width: $valueMedia) {
+        $currentIndex: index(($container-max-widths), ($breakpointWidth $valueWidth));
+        @if $lengthMediaStepsContainer == $currentIndex {
           max-width: $valueWidth;
+        } @else {
+          @media (max-width: $valueMedia) {
+            max-width: $valueWidth;
+          }
         }
       }
     }
   }
+
 }
 
 %row {
@@ -108,7 +115,7 @@ $container-max-widths: (
 //***********************************************/
 @each $breakpoint, $value in $mediaSteps {
 
-  @if ($breakpoint == 'xs') {
+  @if ($breakpoint == 'default') {
     %col {
       flex-basis: 0;
       flex-grow: 1;
@@ -137,7 +144,7 @@ $container-max-widths: (
   }
 
   @for $i from 1 through $grid-columns {
-    @if ($breakpoint == 'xs') {
+    @if ($breakpoint == 'default') {
       %col-#{$i} {
         flex: 0 0 percentage($i / $grid-columns);
         max-width: percentage($i / $grid-columns);
@@ -206,7 +213,7 @@ $flexProps: (
 );
 
 @each $breakpoint, $valueMedia in $mediaSteps {
-  @if ($breakpoint == 'xs') {
+  @if ($breakpoint == 'default') {
     @each $props in $flexProps {
       $key1: nth($props, 1);
       $key2: nth($props, 2);
