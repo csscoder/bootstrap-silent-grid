@@ -74,9 +74,7 @@ $container-max-widths: (
       @if $breakpoint == $breakpointWidth {
         $currentIndex: index(($container-max-widths), ($breakpointWidth $valueWidth));
         @if $lengthMediaStepsContainer == $currentIndex {
-          max-width: $valueWidth;
-        } @else {
-          @media (max-width: $valueMedia) {
+          @media (min-width: $valueMedia) {
             max-width: $valueWidth;
           }
         }
