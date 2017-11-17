@@ -56,9 +56,6 @@ $container-max-widths: (
   }
 }
 
-%flex {
-  display: flex;
-}
 
 %container {
   width: 100%;
@@ -81,7 +78,6 @@ $container-max-widths: (
       }
     }
   }
-
 }
 
 %row {
@@ -114,6 +110,12 @@ $container-max-widths: (
 @each $breakpoint, $value in $mediaSteps {
 
   @if ($breakpoint == 'default') {
+    %flex {
+      display: flex;
+    }
+    %flex-inline {
+      display: inline-flex;
+    }
     %col {
       flex-basis: 0;
       flex-grow: 1;
@@ -143,6 +145,7 @@ $container-max-widths: (
 
   @for $i from 1 through $grid-columns {
     @if ($breakpoint == 'default') {
+
       %col-#{$i} {
         flex: 0 0 percentage($i / $grid-columns);
         max-width: percentage($i / $grid-columns);
@@ -156,6 +159,16 @@ $container-max-widths: (
         order: $i;
       }
     } @else {
+      %flex-#{$breakpoint} {
+        @media (min-width: $value) {
+          display: flex;
+        }
+      }
+      %flex-inline-#{$breakpoint} {
+        @media (min-width: $value) {
+          display: inline-flex;
+        }
+      }
       %order-#{$breakpoint}-#{$i} {
         order: $i;
       }
