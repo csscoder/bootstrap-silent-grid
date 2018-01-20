@@ -53,6 +53,31 @@ When I write SCSS with **Bootstrap Silent Grid** I can write with silent class a
 2. Intelligibility of code, ease of support code.
 3. Speed up coding.
 
+## MediaQueries mixins
+
+In sourse file include MediaQueries mixins bit examples
+
+    // SCSS
+    .test {
+        @include res-less(lg) {
+            font-size: 18px;
+        }
+        @include res(lg) {
+            font-size: 20px;
+        }
+    }
+    // Result CSS
+    @media (max-width: 991px) {
+        .test {
+            font-size: 18px
+        }
+    }
+    @media (min-width: 992px) {
+        .test {
+            font-size: 20px
+        }
+    }
+
 ## Limitations
 
 1. May be is not will be good on very big project.
