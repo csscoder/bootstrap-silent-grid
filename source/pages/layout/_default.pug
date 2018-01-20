@@ -1,0 +1,47 @@
+//- Default variables
+- var path = '';
+- var layout_class = '';
+block var
+
+doctype html
+html.l-html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+        //- section for OpenGraph
+        meta(property="og:url", content="http://csscoder.pro")
+        meta(property="og:type", content="website")
+        meta(property="og:title", content="CSSCODER: Front End Developer")
+        meta(property="og:image", content="https://119816.selcdn.ru/NO-REMOVE-IMAGE-SHARES/csscoder-banner.png")
+        meta(property="og:image:type", content="image/png")
+        meta(property="og:image:width" content="1200")
+        meta(property="og:image:height" content="630")
+        meta(property="og:description" content="I am a Front End Developer with 10Yrs XP. I love BEM, Webpack, and Vue.js. I enjoy working with the latest and modern web technologies.")
+
+        //- section for Twitter meta tag
+        meta(name="twitter:card", content="summary_large_image")
+        meta(name="twitter:site", content="@csscoder")
+        meta(name="twitter:creator", content="@csscoder")
+        meta(name="twitter:title", content="CSSCODER: Front End Developer")
+        meta(name="twitter:image", content="https://119816.selcdn.ru/NO-REMOVE-IMAGE-SHARES/csscoder-banner.png")
+        meta(name="twitter:description", content="I am a developer with more than 10Yrs XP. I love BEM, Webpack, and Vue.js. I enjoy working with the latest and modern web technologies.")
+
+        link(rel="dns-prefetch" href="//fonts.googleapis.com")
+        //- favicon set
+        link(rel="icon", type="image/png", href="favicons/favicon-16x16.png", sizes="16x16")
+        link(rel="icon", type="image/png", href="favicons/favicon-32x32.png", sizes="32x32")
+        link(rel="icon", type="image/png", href="favicons/favicon-96x96.png", sizes="96x96")
+        link(rel="apple-touch-icon", href="favicons/older-iPhone.png")
+        link(rel="apple-touch-icon", href="favicons/iPhone-6-Plus.png", sizes="180x180")
+        link(rel="apple-touch-icon", href="favicons/iPad-Retina.png", sizes="152x152")
+        link(rel="apple-touch-icon", href="favicons/iPad-Pro.png", sizes="167x167")
+
+        block title
+            title CSSCODER - individual senior front-end developer
+    body(class="l-body " + layout_class)
+        // page
+        .l-page#app
+            block content
+        // End page

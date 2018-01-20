@@ -1,0 +1,12 @@
+@import "../../source/scss/bootstrap-silent-grid";
+
+.offset-lg-0 {
+  @extend %offset-lg-0;
+}
+.offset-lg-1 {
+  @extend %offset-lg-1;
+}
+
+.offset-8 {
+  @extend %offset-8;
+}

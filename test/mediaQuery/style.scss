@@ -1,0 +1,19 @@
+@import "../../source/scss/bootstrap-silent-grid";
+
+.test-md {
+  @include res-less(md) {
+    font-size: 20px;
+  }
+  @include res(md) {
+    font-size: 23px;
+  }
+}
+
+.test-less-lg {
+  @include res-less(lg) {
+    font-size: 14px;
+  }
+  @include res(lg) {
+    font-size: 22px;
+  }
+}

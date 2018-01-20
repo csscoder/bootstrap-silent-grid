@@ -1,0 +1,13 @@
+@import "../../source/scss/bootstrap-silent-grid";
+.col {
+  @extend %col;
+}
+.col-auto {
+  @extend %col-auto;
+}
+.col-1 {
+  @extend %col-1;
+}
+.col-md-5 {
+  @extend %col-md-5;
+}

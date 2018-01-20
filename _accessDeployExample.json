@@ -1,0 +1,6 @@
+{
+  "hostname": "1.1.1.1",
+  "username": "user",
+  "port": 22,
+  "hostDestination": "/home/www/"
+}

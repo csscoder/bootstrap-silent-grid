@@ -1,0 +1,15 @@
+.offset-8 {
+  margin-left: 66.66667%;
+}
+
+@media (min-width: 992px) {
+  .offset-lg-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .offset-lg-1 {
+    margin-left: 8.33333%;
+  }
+}

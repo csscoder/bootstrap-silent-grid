@@ -1,0 +1,9 @@
+@import "../../source/scss/bootstrap-silent-grid";
+
+.container {
+  @extend %container;
+}
+
+.container-fluid {
+  @extend %container-fluid;
+}

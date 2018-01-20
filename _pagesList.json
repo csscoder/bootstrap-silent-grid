@@ -1,0 +1,14 @@
+{
+  "pages": [
+    {
+      "viewFile": "pages/layout/list.pug",
+      "pageName": "list.html",
+      "name": "List"
+    },
+    {
+      "viewFile": "pages/homepage.pug",
+      "pageName": "index.html",
+      "name": "Go to simple Example"
+    }
+  ]
+}

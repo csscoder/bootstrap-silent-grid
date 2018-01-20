@@ -1,0 +1,25 @@
+@import "../../source/scss/bootstrap-silent-grid";
+.order-first {
+  @extend %order-first;
+}
+.order-last {
+  @extend %order-last;
+}
+.order-0 {
+  @extend %order-0;
+}
+.order-1 {
+  @extend %order-1;
+}
+.order-md-first {
+  @extend %order-md-first;
+}
+.order-md-last {
+  @extend %order-md-last;
+}
+.order-md-0 {
+  @extend %order-md-0;
+}
+.order-md-1 {
+  @extend %order-md-1;
+}

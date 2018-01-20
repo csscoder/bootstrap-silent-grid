@@ -1,0 +1,32 @@
+@import "../../source/scss/bootstrap-silent-grid";
+
+.flex {
+  @extend %flex;
+}
+.flex-column {
+  @extend %flex-column;
+}
+
+.d-md-flex {
+  @extend %flex-md;
+}
+
+.d-lg-flex-inline {
+  @extend %flex-lg-inline;
+}
+
+.flex-md-column {
+  @extend %flex-md-column;
+}
+
+.flex-md-row {
+  @extend %flex-md-row;
+}
+
+.flex-md-row-reverse {
+  @extend %flex-md-row-reverse;
+}
+
+.flex-md-column-reverse {
+  @extend %flex-md-column-reverse;
+}

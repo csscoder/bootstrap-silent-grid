@@ -1,0 +1,75 @@
+extends layout/_default
+
+block title
+    title Silent Classes from Bootstrap #4.0 | CSSCODER
+
+block content
+    .page
+
+        .container
+            h1
+                | Simple example use "Bootstrap Silent Grid"
+                =", "
+                a(href="https://github.com/csscoderRU/bootstrap-silent-grid" target="_blank") sources
+
+        .container
+            h2 Container
+
+        .container
+            .container__row
+                .container__aside
+                    .decor-box
+                        h2 Aside box
+                .container__main
+                    .decor-box
+                        h2 Main box
+            .container__row.mod--nogutter
+                .container__aside
+                    .decor-box
+                        h2 Aside container
+                .container__main
+                    .decor-box
+                        h2 Grid container
+
+        .container-fluid
+            h2 Container fluid
+
+        .container-fluid
+            .container__row
+                .section__aside
+                    .decor-box
+                        h2 Aside box
+                .section__main
+                    .decor-box
+                        h2 Main box
+            .container__row.mod--nogutter
+                .section__aside
+                    .decor-box
+                        h2 Aside container
+                .section__main
+                    .decor-box
+                        h2 Grid container
+
+        .container
+            pre
+                code.scss.
+                    .container {
+                        @extend %container;
+                    }
+                    .container-fluid {
+                        @extend %container-fluid;
+                    }
+                    .container__row {
+                        @extend %row;
+                        &.mod--nogutter {
+                            @extend %no-gutters-row;
+                        }
+                    }
+                    .container__aside {
+                        @extend %col-4;
+                        @extend %order-last, %order-lg-first;
+                    }
+                    .container__main {
+                        @extend %col-8;
+                    }
+

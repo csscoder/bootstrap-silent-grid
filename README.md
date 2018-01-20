@@ -1,6 +1,8 @@
 # Bootstrap Silent Grid
 
-## My problem when I used Bootstrap Grid
+Source file SCSS [link](https://github.com/csscoderRU/bootstrap-silent-grid/blob/master/source/scss/_bootstrap-silent-grid.scss)
+
+## I want to be free in class naming
 
 I like Bootstrap 4 grid on Flex, but do not like clutter up HTML. I have a visual discomfort, difficult to track steps of media queries when I use bootstrap naming in HTML. For example
 
